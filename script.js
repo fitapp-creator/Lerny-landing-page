@@ -130,8 +130,8 @@
   var note = document.getElementById("formNote");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var email = form.querySelector("input").value.trim();
-    if (!email) return;
+    var phone = form.querySelector("input").value.trim();
+    if (!phone) return;
     form.style.display = "none";
     note.classList.add("success");
     note.textContent = "תודה! קיבלנו את הפנייה — נחזור אליכם תוך יום עסקים אחד 🎉";

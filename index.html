@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>לרני — כל בית הספר. מערכת אחת.</title>
+  <meta name="description" content="לרני מאחדת נוכחות, ציונים, הודעות להורים, שיעורי בית ומערכת שעות בפלטפורמה עברית אחת — מודרנית, פשוטה, ובנויה למורים." />
+  <meta property="og:title" content="לרני — מערכת ניהול בית ספר אחת לכל דבר" />
+  <meta property="og:description" content="נוכחות, ציונים, הודעות, אישורי הורים ובדיקת מבחנים ב-AI — במקום אחד, בעברית, בזמן אמת." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233e69dd'/%3E%3Cpath d='M16 8l9 4.5-9 4.5-9-4.5L16 8z' fill='white'/%3E%3Cpath d='M11 15.5v4c0 1.5 2.2 2.7 5 2.7s5-1.2 5-2.7v-4l-5 2.5-5-2.5z' fill='white' opacity='.85'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#" class="brand" aria-label="לרני — דף הבית">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+      </span>
+      <span class="brand-name">לרני</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="ניווט ראשי">
+      <a href="#features">יכולות</a>
+      <a href="#roles">למי זה מתאים</a>
+      <a href="#preview">הצצה למערכת</a>
+      <a href="#testimonials">בתי ספר מספרים</a>
+      <a href="#pricing">תמחור</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#pricing" class="btn btn-ghost">כניסה</a>
+      <a href="#pricing" class="btn btn-primary btn-sm">קבעו הדגמה</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="פתיחת תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy reveal">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        חדש: בדיקת מבחנים אוטומטית ב-AI — בקרוב
+      </div>
+      <h1>סוף לבלגן.<br /><span class="text-gradient">כל בית הספר</span> במערכת אחת.</h1>
+      <p class="hero-sub">
+        נוכחות, ציונים, הודעות להורים, שיעורי בית, אישורים דיגיטליים ומערכת שעות —
+        בפלטפורמה עברית אחת שנבנתה למורים, לא לבירוקרטים.
+      </p>
+      <div class="hero-ctas">
+        <a href="#pricing" class="btn btn-primary btn-lg">התחילו בחינם<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        <a href="#preview" class="btn btn-outline btn-lg">הצצה למערכת</a>
+      </div>
+      <div class="hero-trust">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        ללא התחייבות · התקנה תוך יום עבודה · ליווי מלא בעברית
+      </div>
+    </div>
+
+    <!-- Hand-built mockup of the actual app dashboard -->
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="app-frame float-slow">
+        <div class="app-titlebar">
+          <span class="tb-dot"></span><span class="tb-dot"></span><span class="tb-dot"></span>
+          <span class="tb-url">app.lerny.co.il</span>
+        </div>
+        <div class="app-body">
+          <aside class="app-sidebar">
+            <div class="app-logo">
+              <span class="app-logo-mark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </span>
+              <span>
+                <b>Lerny</b>
+                <i>בית ספר ניצנים</i>
+              </span>
+            </div>
+            <div class="app-nav">
+              <span class="active">לוח בקרה</span>
+              <span>מערכת שעות</span>
+              <span>הודעות <em class="nav-badge">3</em></span>
+              <span>ציונים והערכות</span>
+              <span>אישורי הורים</span>
+              <span>דוחות ותובנות</span>
+            </div>
+          </aside>
+          <main class="app-main">
+            <div class="app-page-title">בוקר טוב, רחל 👋<small>יום רביעי · כ״ו בסיוון</small></div>
+            <div class="app-stats">
+              <div class="app-stat">
+                <i class="stat-ic ic-green"></i>
+                <b>96%</b><span>נוכחות היום</span>
+              </div>
+              <div class="app-stat">
+                <i class="stat-ic ic-blue"></i>
+                <b>12</b><span>הודעות חדשות</span>
+              </div>
+              <div class="app-stat">
+                <i class="stat-ic ic-amber"></i>
+                <b>4</b><span>אישורים ממתינים</span>
+              </div>
+            </div>
+            <div class="app-panel">
+              <div class="app-panel-title">נוכחות · כיתה ה׳2</div>
+              <div class="app-row"><span class="avatar av-1">נ</span> נועה לוי <em class="chip chip-green">נוכחת</em></div>
+              <div class="app-row"><span class="avatar av-2">א</span> איתי כהן <em class="chip chip-green">נוכח</em></div>
+              <div class="app-row"><span class="avatar av-3">ת</span> תמר אזולאי <em class="chip chip-amber">איחור</em></div>
+              <div class="app-row"><span class="avatar av-4">ד</span> דניאל מזרחי <em class="chip chip-red">חיסור</em></div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- Floating cards around the mockup -->
+      <div class="float-card float-card-1 float-mid">
+        <span class="fc-icon fc-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <span><b>אישור טיול נחתם</b><i>ההורים של נועה · עכשיו</i></span>
+      </div>
+      <div class="float-card float-card-2 float-fast">
+        <span class="fc-icon fc-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        <span><b>הודעה חדשה מהמחנכת</b><i>״מחר מביאים חולצה לבנה״</i></span>
+      </div>
+      <div class="float-card float-card-3 float-slow2">
+        <span class="fc-icon fc-violet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+        </span>
+        <span><b>28 מבחנים נבדקו ב-AI</b><i>תוך 4 דקות</i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Social proof / stats ===== -->
+<section class="stats-bar">
+  <div class="container">
+    <p class="stats-kicker reveal">בתי ספר בכל הארץ כבר עברו ללרני</p>
+    <div class="stats-grid reveal">
+      <div class="stat"><b data-count="120" data-suffix="+">0</b><span>בתי ספר</span></div>
+      <div class="stat"><b data-count="3500" data-suffix="+">0</b><span>מורות ומורים</span></div>
+      <div class="stat"><b data-count="48000" data-suffix="+">0</b><span>תלמידות ותלמידים</span></div>
+      <div class="stat"><b data-count="99.9" data-suffix="%" data-decimals="1">0</b><span>זמינות המערכת</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Problem → Solution ===== -->
+<section class="problem" id="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">נשמע מוכר?</span>
+      <h2>חמש מערכות, שלוש קבוצות וואטסאפ,<br />ואקסל אחד שאף אחד לא מעדכן</h2>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <span class="problem-emoji">📱</span>
+        <h3>הודעות שהולכות לאיבוד</h3>
+        <p>הודעה חשובה להורים נקברת בקבוצת וואטסאפ מתחת ל-70 ברכות בוקר טוב.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-emoji">📄</span>
+        <h3>אישורים על דפים</h3>
+        <p>טופס טיול מודפס, נשלח בתיק, הולך לאיבוד, מודפס שוב. ושוב.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-emoji">📊</span>
+        <h3>נוכחות באקסל</h3>
+        <p>כל מורה מסמן אחרת, ובסוף החודש מישהו צריך לאחד הכול ידנית.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="problem-emoji">🧩</span>
+        <h3>מערכת לכל דבר</h3>
+        <p>אחת לציונים, אחת למערכת שעות, אחת להודעות — ואף אחת לא מדברת עם השנייה.</p>
+      </div>
+    </div>
+
+    <div class="solution-banner reveal">
+      <div class="solution-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+      <h3>לרני עושה לזה סדר.</h3>
+      <p>מערכת אחת, בעברית, שכל הצוות וההורים באמת משתמשים בה — כי היא פשוט נוחה.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">כל מה שצריך. בלי מה שלא.</span>
+      <h2>היכולות שמחזירות למורים את הזמן</h2>
+      <p class="section-sub">לא עוד רשימת פיצ׳רים אינסופית — אלא הכלים שבאמת משנים את היום־יום בבית הספר.</p>
+    </div>
+
+    <div class="features-grid">
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 18H3M15 18h.01M3 12h12M3 6h18"/><path d="m17 14 2 2 4-4" /></svg>
+        </span>
+        <h3>נוכחות בזמן אמת</h3>
+        <p>סימון נוכחות מהטלפון תוך 20 שניות. המנהל רואה תמונה בית־ספרית חיה, וההורים מקבלים עדכון מיידי על חיסור.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </span>
+        <h3>ציונים והערכות</h3>
+        <p>מחוון אחיד, הזנה מהירה ותעודות במקום אחד. בלי גיליונות מקבילים ובלי חישובים ידניים בסוף הסמסטר.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-sky">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        <h3>הודעות להורים</h3>
+        <p>ערוץ רשמי ומסודר במקום קבוצות וואטסאפ. רואים מי קרא, שולחים לכיתה או לשכבה, והכול נשמר ומתועד.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-amber">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+        </span>
+        <h3>אישורי הורים דיגיטליים</h3>
+        <p>טיול? צילום? פעילות? ההורים חותמים דיגיטלית מהנייד, והמחנכת רואה בלחיצה מי אישר ומי עוד לא.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-rose">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </span>
+        <h3>שיעורי בית ומשימות</h3>
+        <p>המורה מפרסמת פעם אחת — התלמידים וההורים רואים בדיוק מה צריך להגיש ומתי. בלי ״לא ידעתי שיש״.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-violet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </span>
+        <h3>מערכת שעות חכמה</h3>
+        <p>מערכת אישית לכל מורה, תלמיד והורה — כולל שינויים, מילוי מקום וחדרים. תמיד מעודכנת, תמיד בכיס.</p>
+      </article>
+
+      <article class="feature-card feature-card-ai reveal">
+        <span class="feature-badge">בקרוב</span>
+        <span class="feature-icon fi-ai">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg>
+        </span>
+        <h3>בדיקת מבחנים ב-AI</h3>
+        <p>מצלמים את ערימת המבחנים — והבינה המלאכותית בודקת, מנמקת ומזינה ציונים. ערב שלם של בדיקות הופך ל-10 דקות.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-icon fi-teal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 13l3-3 4 4 5-6"/></svg>
+        </span>
+        <h3>דוחות ותובנות</h3>
+        <p>מגמות נוכחות, פערים לימודיים ותמונת מצב שכבתית — בלחיצה אחת, מוכן לישיבת צוות או לפיקוח.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Role-based value ===== -->
+<section class="roles" id="roles">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">מערכת אחת, ארבע נקודות מבט</span>
+      <h2>כל אחד מקבל בדיוק את מה שהוא צריך</h2>
+    </div>
+
+    <div class="roles-tabs reveal" role="tablist" aria-label="בחירת תפקיד">
+      <button class="role-tab active" role="tab" aria-selected="true" data-role="principal">🏫 מנהל/ת</button>
+      <button class="role-tab" role="tab" aria-selected="false" data-role="teacher">🧑‍🏫 מורה</button>
+      <button class="role-tab" role="tab" aria-selected="false" data-role="parent">👨‍👩‍👧 הורה</button>
+      <button class="role-tab" role="tab" aria-selected="false" data-role="student">🎒 תלמיד/ה</button>
+    </div>
+
+    <div class="role-panels reveal">
+      <div class="role-panel active" data-role="principal" role="tabpanel">
+        <div class="role-text">
+          <h3>שליטה מלאה, בלי לרדוף אחרי אף אחד</h3>
+          <ul>
+            <li>תמונת מצב בית־ספרית חיה: נוכחות, אירועי משמעת ומגמות — במבט אחד</li>
+            <li>דוחות מוכנים לפיקוח ולישיבות צוות בלחיצה, בלי לאסוף אקסלים</li>
+            <li>ניהול הרשאות, כיתות וצוות ממקום אחד</li>
+            <li>תקשורת בית־ספרית רשמית ומתועדת במקום שמועות בקבוצות</li>
+          </ul>
+        </div>
+        <div class="role-quote">
+          <p>״פעם הייתי מבקש דוח נוכחות ומחכה יומיים. היום אני פותח את הלוח בקרה בבוקר ויודע הכול.״</p>
+          <span>— מנהל בית ספר יסודי, מרכז הארץ</span>
+        </div>
+      </div>
+
+      <div class="role-panel" data-role="teacher" role="tabpanel">
+        <div class="role-text">
+          <h3>פחות ניירת, יותר הוראה</h3>
+          <ul>
+            <li>נוכחות, ציונים ושיעורי בית — הכול מהטלפון, גם באמצע השיעור</li>
+            <li>הודעה אחת להורי הכיתה במקום עשרות הודעות פרטיות</li>
+            <li>אישורי הורים נסגרים לבד — בלי לרדוף אחרי טפסים בתיקים</li>
+            <li>בקרוב: ה-AI בודק את המבחנים, את/ה רק מאשר/ת</li>
+          </ul>
+        </div>
+        <div class="role-quote">
+          <p>״סימון נוכחות לקח לי רבע שיעור. היום זה 20 שניות מהנייד, וההורים כבר יודעים.״</p>
+          <span>— מחנכת כיתה ה׳</span>
+        </div>
+      </div>
+
+      <div class="role-panel" data-role="parent" role="tabpanel">
+        <div class="role-text">
+          <h3>סוף־סוף יודעים מה קורה בבית הספר</h3>
+          <ul>
+            <li>עדכון מיידי על נוכחות, ציונים והודעות — בלי לחפש בקבוצות</li>
+            <li>חתימה דיגיטלית על אישורים תוך שניות, מכל מקום</li>
+            <li>מערכת השעות ושיעורי הבית של הילד — תמיד בכיס</li>
+            <li>ערוץ ישיר ומכובד מול המחנכת, בלי לשתף מספר אישי</li>
+          </ul>
+        </div>
+        <div class="role-quote">
+          <p>״ידעתי על האיחור של הבן שלי לפני שהוא הספיק להמציא סיפור.״</p>
+          <span>— אבא לשניים, חיפה</span>
+        </div>
+      </div>
+
+      <div class="role-panel" data-role="student" role="tabpanel">
+        <div class="role-text">
+          <h3>הכול ברור, שום דבר לא מפתיע</h3>
+          <ul>
+            <li>מערכת שעות מעודכנת — כולל שינויים של הרגע האחרון</li>
+            <li>שיעורי בית ומועדי הגשה במקום אחד, עם תזכורות</li>
+            <li>ציונים והערכות ברגע שהם מתפרסמים</li>
+            <li>מרחב כיתתי עם כל החומרים והקבצים</li>
+          </ul>
+        </div>
+        <div class="role-quote">
+          <p>״אני פותח את לרני בבוקר ויודע בדיוק איזה יום מחכה לי.״</p>
+          <span>— תלמיד כיתה ח׳</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Live preview ===== -->
+<section class="preview" id="preview">
+  <div class="container">
+    <div class="section-head section-head-light reveal">
+      <span class="eyebrow eyebrow-light">הצצה למערכת</span>
+      <h2>מערכת שכיף לפתוח בבוקר</h2>
+      <p class="section-sub">עיצוב נקי, עברית מימין לשמאל באמת, וכל פעולה במרחק שתי לחיצות.</p>
+    </div>
+
+    <div class="preview-grid">
+      <div class="preview-card reveal" >
+        <div class="mini-app">
+          <div class="mini-head"><b>אישורי הורים</b><span class="chip chip-amber">4 ממתינים</span></div>
+          <div class="mini-row">
+            <span><b>טיול שנתי לגליל</b><i>כיתות ה׳ · עד 18.6</i></span>
+            <span class="mini-progress"><i style="--p:78%"></i><em>78% חתמו</em></span>
+          </div>
+          <div class="mini-row">
+            <span><b>אישור צילום לאתר</b><i>כל השכבות</i></span>
+            <span class="mini-progress"><i style="--p:92%"></i><em>92% חתמו</em></span>
+          </div>
+          <div class="mini-signature">
+            <svg viewBox="0 0 120 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="sig-path" d="M4 20c8-14 12-14 14-6s6 8 10-2 8-10 10 0 6 10 12 2 10-12 14-4 8 8 14 2 12-8 18-4"/></svg>
+            <span>חתימה דיגיטלית · נשמרת ומתועדת</span>
+          </div>
+        </div>
+        <h3>אישורים שנסגרים לבד</h3>
+        <p>ההורים חותמים מהנייד, המחנכת רואה התקדמות חיה — ואף טופס לא הולך לאיבוד בתיק.</p>
+      </div>
+
+      <div class="preview-card reveal">
+        <div class="mini-app">
+          <div class="mini-head"><b>הודעות</b><span class="chip chip-blue">בזמן אמת</span></div>
+          <div class="bubble bubble-in">שלום להורי ה׳2! מחר יוצאים לסיור בשעה 8:15. לא לשכוח כובע ומים 🧢</div>
+          <div class="bubble-meta">נשלח להורי הכיתה · ✓ נקרא ע״י 26 מתוך 29</div>
+          <div class="bubble bubble-out">תודה על העדכון! נועה תגיע עם אחותה הגדולה.</div>
+        </div>
+        <h3>תקשורת שלא בורחת לוואטסאפ</h3>
+        <p>הודעות רשמיות עם אישורי קריאה, מסוננות לפי כיתה ושכבה — והכול נשאר במערכת.</p>
+      </div>
+
+      <div class="preview-card reveal">
+        <div class="mini-app">
+          <div class="mini-head"><b>בדיקת מבחנים</b><span class="chip chip-violet">AI · בקרוב</span></div>
+          <div class="scan-zone">
+            <div class="scan-doc">
+              <i></i><i style="width:82%"></i><i style="width:64%"></i><i style="width:90%"></i>
+              <div class="scan-line"></div>
+            </div>
+            <div class="scan-result">
+              <b>ציון: 92</b>
+              <span>שאלה 3: תשובה חלקית — הוסבר הכוח אך לא הכיוון</span>
+            </div>
+          </div>
+        </div>
+        <h3>המבחנים נבדקים. אתם בבית.</h3>
+        <p>מצלמים את המחברות, ה-AI בודק לפי המחוון שלכם, מנמק כל ניקוד — והמורה רק מאשרת.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Differentiators strip ===== -->
+<section class="diff">
+  <div class="container diff-grid">
+    <div class="diff-item reveal"><b>עברית ו-RTL מהיסוד</b><span>לא תרגום של מוצר זר — מערכת שנולדה בעברית</span></div>
+    <div class="diff-item reveal"><b>הכול בזמן אמת</b><span>נוכחות, הודעות והתראות מתעדכנים מיידית</span></div>
+    <div class="diff-item reveal"><b>עובדת מכל מכשיר</b><span>אפליקציית ווב מהירה — גם בטלפון של המורה בכיתה</span></div>
+    <div class="diff-item reveal"><b>מאובטחת ופרטית</b><span>עומדת בדרישות חוק הגנת הפרטיות ותיקון 13</span></div>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">בתי ספר מספרים</span>
+      <h2>הרגע שבו הצוות מפסיק להילחם במערכת</h2>
+    </div>
+
+    <div class="testimonial-grid">
+      <figure class="testimonial reveal">
+        <div class="stars" aria-label="חמישה כוכבים">★★★★★</div>
+        <blockquote>״תוך שבועיים כל הצוות עבר ללרני מרצונו. זו הפעם הראשונה שמערכת לא נכפתה על המורים — הם פשוט העדיפו אותה.״</blockquote>
+        <figcaption><b>רחל א.</b><span>מנהלת בית ספר יסודי · 540 תלמידים</span></figcaption>
+      </figure>
+      <figure class="testimonial reveal">
+        <div class="stars" aria-label="חמישה כוכבים">★★★★★</div>
+        <blockquote>״ביטלנו שלוש מערכות שונות ושתי קבוצות וואטסאפ של הצוות. ההורים מרוצים, ואני סוף־סוף רואה הכול במקום אחד.״</blockquote>
+        <figcaption><b>יוסי ל.</b><span>סגן מנהל חטיבת ביניים</span></figcaption>
+      </figure>
+      <figure class="testimonial reveal">
+        <div class="stars" aria-label="חמישה כוכבים">★★★★★</div>
+        <blockquote>״אישורי הטיול שהיו לוקחים שבועיים נסגרו ביומיים. ההורים חתמו מהנייד עוד לפני שהילדים הגיעו הביתה.״</blockquote>
+        <figcaption><b>מיכל ש.</b><span>מחנכת ורכזת שכבה</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pricing / CTA ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="pricing-card reveal">
+      <div class="pricing-bg" aria-hidden="true"></div>
+      <span class="eyebrow eyebrow-light">מוכנים לעשות סדר?</span>
+      <h2>בית הספר שלכם יכול לעבוד אחרת כבר החודש</h2>
+      <p>הדגמה אישית של 30 דקות, הקמה מלאה תוך יום עבודה, וליווי צמוד בעברית — בלי התחייבות ובלי אותיות קטנות.</p>
+
+      <form class="cta-form" id="ctaForm">
+        <input type="email" inputmode="email" placeholder="המייל של בית הספר" aria-label="כתובת מייל" required />
+        <button type="submit" class="btn btn-light btn-lg">קבעו הדגמה חינם</button>
+      </form>
+      <p class="form-note" id="formNote">נחזור אליכם תוך יום עסקים אחד · המחיר מותאם לגודל בית הספר</p>
+
+      <div class="pricing-points">
+        <span>✓ ניסיון חינם לצוות הניהול</span>
+        <span>✓ הדרכת מורים כלולה</span>
+        <span>✓ ייבוא נתונים מהמערכת הקיימת</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </span>
+        <span class="brand-name">לרני</span>
+      </a>
+      <p>מערכת ניהול בית הספר שנבנתה למורים, להורים ולתלמידים — בעברית, מהיסוד.</p>
+    </div>
+    <div class="footer-col">
+      <b>המוצר</b>
+      <a href="#features">יכולות</a>
+      <a href="#roles">למי זה מתאים</a>
+      <a href="#preview">הצצה למערכת</a>
+      <a href="#pricing">תמחור</a>
+    </div>
+    <div class="footer-col">
+      <b>משפטי</b>
+      <a href="#">תנאי שימוש</a>
+      <a href="#">מדיניות פרטיות</a>
+      <a href="#">נגישות</a>
+    </div>
+    <div class="footer-col">
+      <b>יצירת קשר</b>
+      <a href="mailto:hello@lerny.co.il">hello@lerny.co.il</a>
+      <a href="tel:+97230000000">03-000-0000</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> לרני · כל הזכויות שמורות</span>
+    <span>נבנה באהבה בישראל 🇮🇱</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -2,13 +2,38 @@
 (function () {
   "use strict";
 
-  /* Sticky header shadow */
+  /* Sticky header shadow + scroll progress bar */
   var header = document.getElementById("siteHeader");
+  var progress = document.getElementById("scrollProgress");
   function onScroll() {
     header.classList.toggle("scrolled", window.scrollY > 8);
+    if (progress) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var ratio = max > 0 ? window.scrollY / max : 0;
+      progress.style.transform = "scaleX(" + Math.min(ratio, 1) + ")";
+    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  /* 3D tilt on the hero mockup (desktop pointers only) */
+  var heroVisual = document.getElementById("heroVisual");
+  var appFrame = document.getElementById("appFrame");
+  var fineMQ = window.matchMedia("(pointer: fine)");
+  var motionMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (heroVisual && appFrame && fineMQ.matches && !motionMQ.matches) {
+    heroVisual.addEventListener("mousemove", function (e) {
+      var rect = heroVisual.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+      appFrame.style.animation = "none";
+      appFrame.style.transform =
+        "rotateY(" + (x * -8).toFixed(2) + "deg) rotateX(" + (y * 8).toFixed(2) + "deg) translateY(-4px)";
+    });
+    heroVisual.addEventListener("mouseleave", function () {
+      appFrame.style.transform = "rotateY(0deg) rotateX(0deg) translateY(0)";
+    });
+  }
 
   /* Mobile menu */
   var toggle = document.getElementById("menuToggle");

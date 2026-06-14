@@ -126,7 +126,7 @@
   });
 
   /* CTA form — שולח ל-Google Sheets דרך Apps Script */
-  var SHEETS_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+  var SHEETS_URL = "https://script.google.com/macros/s/AKfycbwx4w5tPuRjhW7HcyypXDp4NcJMDSVgyy8hQWtssLEisYdzNgVIWi4_qPYotlCtQFDFDA/exec";
   var form = document.getElementById("ctaForm");
   var note = document.getElementById("formNote");
   form.addEventListener("submit", function (e) {

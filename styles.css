@@ -227,9 +227,14 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
   position: relative;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
+  grid-template-areas: "top visual" "bot visual";
+  grid-template-rows: auto 1fr;
+  column-gap: 3.5rem;
+  row-gap: 1.5rem;
 }
+.hero-copy-top { grid-area: top; align-self: end; }
+.hero-copy-bot { grid-area: bot; align-self: start; }
+.hero-visual   { grid-area: visual; align-self: center; }
 
 .hero-badge {
   display: inline-flex;
@@ -1154,8 +1159,13 @@ section { scroll-margin-top: 5rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 64rem) {
-  .hero-inner { grid-template-columns: 1fr; gap: 4rem; }
-  .hero-copy { text-align: center; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "top" "visual" "bot";
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  .hero-copy-top, .hero-copy-bot { text-align: center; }
   .hero-sub { margin-inline: auto; }
   .hero-ctas, .hero-trust { justify-content: center; }
   .hero-visual { max-width: 34rem; margin-inline: auto; }

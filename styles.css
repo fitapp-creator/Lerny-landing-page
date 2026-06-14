@@ -1084,6 +1084,14 @@ section { scroll-margin-top: 5rem; }
   outline: none;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
 .cta-form input::placeholder { color: rgb(255 255 255 / 0.6); }
 .cta-form input:focus { border-color: white; background: rgb(255 255 255 / 0.18); }
 .form-note { font-size: 0.85rem; opacity: 0.75; }

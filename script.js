@@ -131,16 +131,17 @@
   var note = document.getElementById("formNote");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var name   = document.getElementById("fieldName").value.trim();
-    var school = document.getElementById("fieldSchool").value.trim();
-    var phone  = document.getElementById("fieldPhone").value.trim();
+    var name    = document.getElementById("fieldName").value.trim();
+    var school  = document.getElementById("fieldSchool").value.trim();
+    var phone   = document.getElementById("fieldPhone").value.trim();
+    var company = document.getElementById("fieldCompany").value.trim(); // honeypot — bots only
     if (!name || !school || !phone) return;
 
     var btn = form.querySelector("button");
     btn.disabled = true;
     btn.textContent = "שולח…";
 
-    var payload = JSON.stringify({ name: name, school: school, phone: phone });
+    var payload = JSON.stringify({ name: name, school: school, phone: phone, company: company });
 
     fetch(SHEETS_URL, {
       method: "POST",

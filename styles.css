@@ -1096,6 +1096,8 @@ section { scroll-margin-top: 5rem; }
 .cta-form input:focus { border-color: white; background: rgb(255 255 255 / 0.18); }
 .form-note { font-size: 0.85rem; opacity: 0.75; }
 .form-note.success { opacity: 1; font-weight: 700; }
+.form-consent { font-size: 0.75rem; opacity: 0.7; margin-top: 0.6rem; max-width: 26rem; margin-inline: auto; }
+.form-consent a { color: inherit; text-decoration: underline; }
 .pricing-points {
   display: flex;
   justify-content: center;

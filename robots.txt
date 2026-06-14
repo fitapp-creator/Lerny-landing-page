@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# לאחר חיבור הדומיין, הסירו את הסולמית והחליפו בכתובת האמיתית:
+# Sitemap: https://your-domain.com/sitemap.xml

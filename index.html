@@ -533,7 +533,9 @@
       <p>שיחה קצרה לוודא פרטים, פגישת הדגמה מסודרת, הדרכה ושלב הקמה — בלי התחייבות ובלי אותיות קטנות.</p>
 
       <form class="cta-form" id="ctaForm">
-        <input type="tel" inputmode="tel" placeholder="מספר הטלפון של בית הספר" aria-label="מספר טלפון" pattern="[0-9\-\+\s]{7,15}" required />
+        <input type="text" id="fieldName" placeholder="שם מלא" aria-label="שם מלא" required />
+        <input type="text" id="fieldSchool" placeholder="שם בית הספר" aria-label="שם בית הספר" required />
+        <input type="tel" id="fieldPhone" inputmode="tel" placeholder="מספר טלפון" aria-label="מספר טלפון" pattern="[0-9\-\+\s]{7,15}" required />
         <button type="submit" class="btn btn-light btn-lg">השאירו פרטים</button>
       </form>
       <p class="form-note" id="formNote">נחזור אליכם תוך יום עסקים אחד</p>

@@ -1061,9 +1061,10 @@ section { scroll-margin-top: 5rem; }
 }
 .cta-form {
   display: flex;
+  flex-direction: column;
   gap: 0.7rem;
-  justify-content: center;
-  max-width: 30rem;
+  align-items: stretch;
+  max-width: 26rem;
   margin: 0 auto 0.9rem;
 }
 .cta-form input {
@@ -1192,7 +1193,7 @@ section { scroll-margin-top: 5rem; }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 0.85rem 1.5rem; font-size: 1.05rem; }
 
-  .cta-form { flex-direction: column; }
+  .cta-form { max-width: 100%; }
 }
 
 @media (max-width: 30rem) {

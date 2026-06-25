@@ -125,16 +125,44 @@
     });
   });
 
-  /* CTA form — demo behaviour (no backend wired yet) */
+  /* CTA form — שולח ל-Google Sheets דרך Apps Script */
+  var SHEETS_URL = "https://script.google.com/macros/s/AKfycbwx4w5tPuRjhW7HcyypXDp4NcJMDSVgyy8hQWtssLEisYdzNgVIWi4_qPYotlCtQFDFDA/exec";
   var form = document.getElementById("ctaForm");
   var note = document.getElementById("formNote");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var phone = form.querySelector("input").value.trim();
-    if (!phone) return;
-    form.style.display = "none";
-    note.classList.add("success");
-    note.textContent = "תודה! קיבלנו את הפנייה — נחזור אליכם תוך יום עסקים אחד 🎉";
+    var name    = document.getElementById("fieldName").value.trim();
+    var school  = document.getElementById("fieldSchool").value.trim();
+    var phone   = document.getElementById("fieldPhone").value.trim();
+    var company = document.getElementById("fieldCompany").value.trim(); // honeypot — bots only
+    if (!name || !school || !phone) return;
+
+    var btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.textContent = "שולח…";
+
+    var payload = JSON.stringify({ name: name, school: school, phone: phone, company: company });
+
+    fetch(SHEETS_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: payload
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.result === "success") {
+        form.style.display = "none";
+        note.classList.add("success");
+        note.textContent = "תודה! קיבלנו את הפנייה — נחזור אליכם תוך יום עסקים אחד 🎉";
+      } else {
+        throw new Error("server error");
+      }
+    })
+    .catch(function () {
+      btn.disabled = false;
+      btn.textContent = "השאירו פרטים";
+      note.textContent = "משהו לא עבד — אפשר לנסות שוב או לפנות אלינו ישירות.";
+    });
   });
 
   /* Footer year */

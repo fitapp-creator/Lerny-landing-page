@@ -227,9 +227,14 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
   position: relative;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: 3.5rem;
-  align-items: center;
+  grid-template-areas: "top visual" "bot visual";
+  grid-template-rows: auto 1fr;
+  column-gap: 3.5rem;
+  row-gap: 1.5rem;
 }
+.hero-copy-top { grid-area: top; align-self: end; }
+.hero-copy-bot { grid-area: bot; align-self: start; }
+.hero-visual   { grid-area: visual; align-self: center; }
 
 .hero-badge {
   display: inline-flex;
@@ -509,7 +514,7 @@ button { font: inherit; cursor: pointer; border: 0; background: none; }
 }
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   text-align: center;
 }
@@ -1061,9 +1066,10 @@ section { scroll-margin-top: 5rem; }
 }
 .cta-form {
   display: flex;
+  flex-direction: column;
   gap: 0.7rem;
-  justify-content: center;
-  max-width: 30rem;
+  align-items: stretch;
+  max-width: 26rem;
   margin: 0 auto 0.9rem;
 }
 .cta-form input {
@@ -1078,10 +1084,20 @@ section { scroll-margin-top: 5rem; }
   outline: none;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
 .cta-form input::placeholder { color: rgb(255 255 255 / 0.6); }
 .cta-form input:focus { border-color: white; background: rgb(255 255 255 / 0.18); }
 .form-note { font-size: 0.85rem; opacity: 0.75; }
 .form-note.success { opacity: 1; font-weight: 700; }
+.form-consent { font-size: 0.75rem; opacity: 0.7; margin-top: 0.6rem; max-width: 26rem; margin-inline: auto; }
+.form-consent a { color: inherit; text-decoration: underline; }
 .pricing-points {
   display: flex;
   justify-content: center;
@@ -1153,8 +1169,13 @@ section { scroll-margin-top: 5rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 64rem) {
-  .hero-inner { grid-template-columns: 1fr; gap: 4rem; }
-  .hero-copy { text-align: center; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "top" "visual" "bot";
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  .hero-copy-top, .hero-copy-bot { text-align: center; }
   .hero-sub { margin-inline: auto; }
   .hero-ctas, .hero-trust { justify-content: center; }
   .hero-visual { max-width: 34rem; margin-inline: auto; }
@@ -1192,7 +1213,7 @@ section { scroll-margin-top: 5rem; }
   .main-nav.open { display: flex; }
   .main-nav a { padding: 0.85rem 1.5rem; font-size: 1.05rem; }
 
-  .cta-form { flex-direction: column; }
+  .cta-form { max-width: 100%; }
 }
 
 @media (max-width: 30rem) {
